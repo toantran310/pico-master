@@ -24,7 +24,7 @@ class Pico_Contact {
 	{
         if (strlen($url) > 0) {
             // the url im looking for
-            if(strpos("contact", $url) !== false && $_SERVER['REQUEST_METHOD'] === 'POST') {
+            if(strpos($url,"contact") !== false && $_SERVER['REQUEST_METHOD'] === 'POST') {
                 $this->run_this_plugin = true;
             }
         }

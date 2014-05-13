@@ -26,7 +26,7 @@ class Pico_Sand {
 	
 	public function before_load_content(&$file)
 	{
-        if(strpos($file, "content/index.md") !== false || strpos($file, "content/portfolio/index.md") !== false){
+        if(strpos($file, "content/index.md") !== false || strpos($file, "content/vi/index.md") !== false){
             $this->run_this_plugin = true;
         }
 	}
