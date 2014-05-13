@@ -344,6 +344,7 @@ $(document).ready(function($) {
             message.hide().removeClass('success').removeClass('error').addClass('error').html("Please input your name").fadeIn('slow').delay(5000).fadeOut('slow');
         }
 
+
 		var $this = $(this);
 		
 		$.ajax({
