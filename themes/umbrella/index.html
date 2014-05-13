@@ -1,0 +1,227 @@
+{% extends "layout.html" %}
+{% block maincontent %}
+<!-- home
+			================================================== -->
+<div class="section">
+    <div id="home-section">
+
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div class="flexcaption">
+                        <h1>Tran Ba Toan</h1>
+                        <div><span></span></div>
+                        <p>I'm a Web Developer</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#about-section" class="discover">Discover Now</a>
+    </div>
+</div>
+<!-- End home -->
+
+<!-- about
+    ================================================== -->
+<div class="section">
+    <div id="about-section">
+        <div class="container">
+            <div class="title-section triggerAnimation animated" data-animate="bounceIn">
+                <h1>{{ data.abouts.title }}</h1>
+                <div class="dotted-line"><span></span></div>
+                <p>{{ data.abouts.description }}</p>
+            </div>
+
+            <div class="services-box">
+                <div class="row">
+                    {% for about in data.abouts.list_about %}
+                    {% if loop.index % 3 == 1 %}
+                    {% set animation = "fadeInLeft" %}
+                    {% elseif loop.index % 3 == 2 %}
+                    {% set animation = "fadeInUp" %}
+                    {% else %}
+                    {% set animation = "fadeInRight" %}
+                    {% endif %}
+                    <div class="col-md-4">
+                        <div class="services-post triggerAnimation animated" data-animate="{{ animation }}">
+                            <a href="#"><i class="fa {{ about.icon }}"></i></a>
+                            <h2>{{ about.title }}</h2>
+                            <p>{{ about.content }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End about -->
+
+<!-- portfolio
+    ================================================== -->
+<div class="section">
+    <div id="portfolio-section">
+        <div class="container">
+            <div class="title-section triggerAnimation animated" data-animate="bounceIn">
+                <h1>{{ data.portfolio.title }}</h1>
+                <div class="dotted-line"><span></span></div>
+                <p>{{ data.portfolio.description }}</p>
+            </div>
+
+            <ul class="filter">
+                <li><a href="#" class="active" data-filter="*">All</a></li>
+                {% for skill in skills %}
+                <li><a href="#" data-filter=".{{ skill }}">{{skill|replace({'-': " "}) }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <div class="portfolio-container triggerAnimation animated" data-animate="bounceIn">
+                {% for page in pages %}
+                    {% if(page.type == "Portfolio") %}
+                    {% set skillclass = "" %}
+                    {% set skillshow = "" %}
+                    {% for skill in page.skill %}
+                    {% set skillclass = skillclass ~ " " ~ skill %}
+                    {% set skillshow = skillshow ~ "<span>" ~ skill|replace({'-': " "}) ~ "</span>" %}
+                    {% endfor %}
+
+                    <div class="work-post {{ skillclass }} photography">
+                        <img alt="" src="{{ base_url }}/{{ page.thumbnail }}">
+                        <a href="{{ page.url }}" class="hover-box">
+                            <div class="inner-hover">
+                                <h2>{{ page.title }}</h2>
+                                {{ skillshow }}
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End portfolio -->
+
+<!-- client
+    ================================================== -->
+<div class="section">
+    <div id="client-section" data-stellar-background-ratio="0">
+        <div class="container">
+            <div class="title-section white triggerAnimation animated" data-animate="bounceIn">
+                <h1>{{ data.clients.title }} </h1>
+                <div class="dotted-line"><span></span></div>
+                <p>{{ data.clients.description }}</p>
+            </div>
+
+            <ul class="client-list">
+                {% for client in data.clients.list_clients %}
+                <li><a href="#"><img alt="" src="{{ base_url }}{{ client.image }}"></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <!-- end video background tags -->
+
+</div>
+<!-- End client -->
+
+<!-- team
+    ================================================== -->
+<div class="section">
+    <div id="team-section">
+        <div class="container">
+            <div class="title-section triggerAnimation animated" data-animate="bounceIn">
+                <h1>{{ data.team.title }}</h1>
+                <div class="dotted-line"><span></span></div>
+                <p>{{ data.team.description }}</p>
+            </div>
+
+            <div class="team-box">
+                <div class="row">
+                    {% for team in data.team.list_team %}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="staff-post">
+                            <div class="staff-post-gal">
+                                <img alt="" src="{{ base_url }}{{ team.image }}">
+                                <div class="hover-team">
+                                    <ul class="staf-social">
+                                        {% for social in team.list_social %}
+                                        <li><a class="{{ social.class }}" href="{{ social.link }}"><i class="fa fa-{{ social.class }}"></i></a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="staff-post-content">
+                                <h3>{{ team.name }}</h3>
+                                <span>{{ team.position }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End team -->
+
+<!-- contact
+    ================================================== -->
+<div class="section">
+    <div id="contact-section">
+        <div class="container">
+            <div class="title-section triggerAnimation animated" data-animate="bounceIn">
+                <h1>{{ data.contact.title }}</h1>
+                <div class="dotted-line"><span></span></div>
+                <p>{{ data.contact.description }}</p>
+            </div>
+        </div>
+        <div class="map"></div>
+        <div class="container">
+            <div class="contact-box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <h2>Contact Info</h2>
+                            <p>{{ data.contact.contact_info }}</p>
+                            <ul class="contact-list">
+                                <li>
+                                    <span><i class="fa fa-map-marker"></i></span>
+                                    <p>{{ data.contact.address }}</p>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-phone"></i></span>
+                                    <p>{{ data.contact.phone }}</p>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-envelope-o"></i></span>
+                                    <p>{{ data.contact.email }}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form id="contact-form">
+                            <h2>Leave a Reply</h2>
+                            <input name="name" id="name" type="text" placeholder="Name">
+                            <input name="mail" id="mail" type="text" placeholder="Your e-mail">
+                            <input name="website" id="website" type="text" placeholder="Website">
+                            <textarea name="comment" id="comment" placeholder="Message"></textarea>
+                            <button type="submit" name="contact-submit" id="submit_contact">
+                                <i class="fa fa-envelope-o"></i>
+                            </button>
+                            <div id="msg" class="message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End contact -->
+{% endblock %}

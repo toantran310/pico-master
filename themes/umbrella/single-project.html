@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<!-- Header
+		    ================================================== -->
+<header class="clearfix">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img alt="" src="{{ theme_url }}/images/logo.png"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ base_url }}#home-section">Home</a></li>
+                    <li><a href="{{ base_url }}#about-section">About</a></li>
+                    <li><a class="active" href="{{ base_url }}#portfolio-section">Portfolio</a></li>
+                    <li><a href="{{ base_url }}#team-section">Team</a></li>
+                    <li><a href="{{ base_url }}#contact-section">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header -->
+{% endblock %}
+
+{% block head %}
+<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+{% if meta.description %}
+<meta name="description" content="{{ meta.description }}">
+{% endif %}{% if meta.robots %}
+<meta name="robots" content="{{ meta.robots }}">
+{% endif %}
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/bootstrap.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/magnific-popup.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/flexslider.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/animate.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/font-awesome.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/jquery.bxslider.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/YTPlayer.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/responsive.css" media="screen">
+
+<script src="http://www.youtube.com/player_api" id="YTAPI"></script>
+{% endblock %}
+
+{% block script %}
+<div class="preloader">
+    <img alt="" src="{{ theme_url }}/images/preloader.gif">
+</div>
+
+
+<script type="text/javascript" src="{{ theme_url }}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/jquery.migrate.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/jquery.imagesloaded.min.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/jquery.appear.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/bootstrap.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/waypoints.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/plugins-scroll.js"></script>
+<script type="text/javascript" src="{{ theme_url }}/js/script.js"></script>
+{% endblock %}
+
+{% block maincontent %}
+<!-- singlepost
+			================================================== -->
+<div class="section">
+    <div id="singlepost-section">
+        <div class="container">
+            <div class="post-head">
+                <h1>{{ current_page.title }}</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            {% for image in current_page.image %}
+                            <li>
+                                <img alt="" src="{{ base_url }}/{{ image }}">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="project-details">
+                        <h2>Project Details:</h2>
+                        {{ content }}
+                        <h2>additional information:</h2>
+                        <ul class="project-list">
+                            {% set skillshow = "" %}
+                            {% for skill in current_page.skill %}
+                            {% set skillshow = skillshow ~ "" ~ skill|replace({'-': " "})%}
+                            {% if loop.last == false %}
+                            {% set skillshow = skillshow ~ ", " %}
+                            {% endif %}
+                            {% endfor %}
+                            <li><span>Technologies Used :</span> {{ skillshow|title }}</li>
+                            <li><span>Date : </span> {{ current_page.ddate }}</li>
+                            <li><span>URL :</span> <a href="{{ current_page.durl }}">{{ current_page.durl }}</a></li>
+                        </ul>
+                        <div class="share-box">
+                            <h2>Share this story:</h2>
+                            <ul class="share-icons">
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End singlepost -->
+{% endblock %}
