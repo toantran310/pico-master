@@ -342,8 +342,20 @@ $(document).ready(function($) {
 
         if($("#name").val() == ""){
             message.hide().removeClass('success').removeClass('error').addClass('error').html("Please input your name").fadeIn('slow').delay(5000).fadeOut('slow');
+            return;
         }
 
+        if($("#mail").val() == ""){
+            message.hide().removeClass('success').removeClass('error').addClass('error').html("Please input your email").fadeIn('slow').delay(5000).fadeOut('slow');
+            return;
+        }
+
+        if($("#comment").val() == ""){
+            message.hide().removeClass('success').removeClass('error').addClass('error').html("Please input your message").fadeIn('slow').delay(5000).fadeOut('slow');
+            return;
+        }
+
+        $(".preloader").show();
 
 		var $this = $(this);
 		
@@ -354,7 +366,7 @@ $(document).ready(function($) {
 			cache: false,
 			data: $('#contact-form').serialize(),
 			success: function(data) {
-
+                $(".preloader").hide();
 				if(data.info !== 'error'){
 					$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
 					message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
