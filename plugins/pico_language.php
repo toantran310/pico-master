@@ -10,6 +10,7 @@
 class Pico_Language {
 
     private $settings;
+    private $current_language;
 
 	public function plugins_loaded()
 	{
@@ -23,7 +24,6 @@ class Pico_Language {
 	
 	public function request_url(&$url)
 	{
-        session_start();
         if(strpos($url, "changelanguage") !== false) {
             $_SESSION["language"] = $_GET["language"];
             header("Location: {$this->settings["base_url"]}");
@@ -32,7 +32,7 @@ class Pico_Language {
             if(isset($_SESSION["language"])){
                 $currentLanguage = $_SESSION["language"];
                 if($currentLanguage != $this->settings["default_language"]){
-                    if(strpos($url, $currentLanguage) === false) {
+                    if(strpos($url, $currentLanguage."/") === false && $url != $currentLanguage) {
                         header("Location: {$this->settings["base_url"]}"."/". $currentLanguage."/". $url);
                     }
                 }
@@ -87,12 +87,12 @@ class Pico_Language {
 	
 	public function get_pages(&$pages, &$current_page, &$prev_page, &$next_page)
 	{
-        $current_language = $this->settings["default_language"];
+        $this->current_language = $this->settings["default_language"];
         if(isset($_SESSION["language"])){
-            $current_language = $_SESSION["language"];
+            $this->current_language = $_SESSION["language"];
         }
         foreach ($pages as $key => $page) {
-            if($page["language"] != $current_language){
+            if($page["language"] != $this->current_language){
                 unset($pages[$key]);
             }
         }
@@ -107,6 +107,7 @@ class Pico_Language {
 	
 	public function before_render(&$twig_vars, &$twig, &$template)
 	{
+        $twig_vars["current_language"] = $this->current_language;
 	}
 	
 	public function after_render(&$output)

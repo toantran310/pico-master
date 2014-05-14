@@ -50,15 +50,21 @@
 						<a class="navbar-brand" href="#"><img alt="" src="{{ theme_url }}/images/logo.png"></a>
 					</div>
 					<div class="navbar-collapse collapse">
+                        <ul class="navbar-right change-language">
+                            {% for language in config.languages %}
+                            {% set language_class = "" %}
+                            {% if(current_language == language) %}
+                            {% set language_class = "active" %}
+                            {% endif %}
+                                <li><a class="{{ language_class }}" href="changelanguage?language={{ language }}">{{ language }}</a></li>
+                            {% endfor %}
+                        </ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a class="active" href="#home-section">Home</a></li>
 							<li><a href="#about-section">About</a></li>
 							<li><a href="#portfolio-section">Portfolio</a></li>
 							<li><a href="#team-section">Team</a></li>
 							<li><a href="#contact-section">Contact Us</a></li>
-							<li><a href="changelanguage?language=vi">Vietnamese</a></li>
-							<li><a href="changelanguage?language=en">English</a></li>
-
 						</ul>
 					</div>
 				</div>

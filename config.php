@@ -20,3 +20,4 @@ $config['theme'] = 'umbrella'; 			// Set the theme (defaults to "default")
 
 //$config['custom_setting'] = 'Hello'; 	// Can be accessed by {{ config.custom_setting }} in a theme
 $config['default_language'] = 'en';
+$config['languages'] = array('en', 'vi');

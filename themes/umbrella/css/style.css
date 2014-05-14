@@ -79,6 +79,41 @@ header {
     height: auto;
 }
 
+.change-language {
+    margin-top: 40px;
+    padding-left: 10px;
+}
+
+.change-language li {
+    margin-left: 5px;
+    display:inline;
+    float: left;
+}
+
+.change-language li a {
+    color: #908f8f;
+    text-decoration: none;
+    display: block;
+    text-indent: -9999px;
+    width: 26px;
+    height: 20px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.change-language li a {
+    background: url('../images/en.png') no-repeat 0 0;
+}
+
+.change-language li+li a {
+    background: url('../images/vi.png') no-repeat 0 0;
+}
+
+.change-language li a.active, .change-language li a:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
 .innher-header {
     padding: 0 15px;
 }
