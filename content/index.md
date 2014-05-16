@@ -51,6 +51,11 @@ Description: This description will go in the meta description tag
                 "name": "lorem",
                 "url": "#",
                 "image": "/content/data/upload/kashion.jpg"
+            },
+            {
+             "name": "VNG",
+             "url": "#",
+             "image": "/content/data/upload/vng.png"
             }
         ]
     },

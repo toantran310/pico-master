@@ -5,33 +5,33 @@ Language: vi
 */
 {
     "abouts": {
-        "title":"HELLO AND WELCOME TO MY PERSONAL PORTFOLIO",
-        "description": "Tôi tên là Trần Bá Toàn.",
+        "title":"Chào Mừng Đến Với Hồ Sơ Năng Lực Của Tôi",
+        "description": "Tôi tên là Trần Bá Toàn và là một nhà phát triển web ở thành phố Hồ Chí Minh, Việt Nam. Tôi hiện đang làm việc tại công ty Innity VietNam và đồng thời là thành viên của nhóm GAPT, tôi cũng làm việc với tư cách lập trình viên tự do khi có thời gian rảnh. Tôi yêu thích lập trình và phát triển các giải pháp sáng tạo nhằm hỗ trợ cho các cá nhân và doanh nghiệp thực hiện hình thức kinh doanh trực tuyến. Rất hân hạnh và sẵn sàng mang đến cho Quý khách những trang web sáng tạo, ấn tượng và độc đáo nhất.",
         "list_about": [
             {
                 "title":"CMS / BLOGS / E-COMMERCE",
-                "content":"Want to manage the site yourself? Want to build an online store? Good. I have experience with many PHP opensources, such as: Wordpress, Drupal, Opencart, Magento. I can use them to accomplish your site’s goals",
+                "content":"Bạn muốn tự quản lý trang web của chính mình? Muốn xây dựng 1 cửa hàng trực tuyến? Điều này hoàn toàn có thể. Là một nhà lập trình có kinh nghiệm với nhiều mã nguồn PHP mở, bao gồm: Drupal, Opencart, Magento…, tôi có thể sử dụng chúng để mang đến cho bạn một trang web hoàn chỉnh, đảm bảo thỏa mãn mọi mức độ kỳ vọng.",
                 "icon":"fa-location-arrow"
             },
             {
                 "title":"ZEND FRAMEWORK / PHP / MYSQL",
-                "content":"Zend Framework is the most popular framework for modern, high-performing PHP applications. I have the skills necessary to build dynamic web sites like what you want. Beside Zend, I have many experience to work with other PHP frameworks if you need.",
+                "content":"Zend Framework là một trong những framework thịnh hành phổ biến nhất hiện nay cho những ứng dụng PHP hiện đại và có hiệu suất cao. Thông thạo những kỹ năng cần thiết để xây dựng các trang web động, tôi bảo đảm đáp ứng tất cả các nhu cầu bạn đưa ra. Bên cạnh Zend, tôi còn có nhiều kinh nghiệm làm việc với những PHP framework khác theo mọi yêu cầu của bạn.",
                 "icon":"fa-laptop"
             },
             {
                 "title":"ANDROID / PHONEGAP",
-                "content":"I can make mobile applications on multiple platforms by Jquery Mobile and PhoneGap. I also have experience with native app on Android Platform. ",
+                "content":"Tôi có thể lập trình được những ứng dụng di động trên đa nền tảng sử dụng Jquery Mobile và PhoneGap. Bên cạnh đó, tôi cũng có kinh nghiệm làm việc với ứng dụng di động trên nền tảng Android.",
                 "icon":"fa-mobile"
             }
         ]
     },
     "portfolio": {
-        "title": "BEST OF MY WORKS",
-        "description": "I would like to show you what can I do for you."
+        "title": "Một Vài Dự Án Đang Live",
+        "description": "Tôi sẽ cho bạn thấy những gì tôi có thể làm được."
     },
     "clients": {
-        "title":"My client",
-        "description": "My main goal is to help my customers achieve their dreams",
+        "title":"Khách Hàng Đã Hợp Tác",
+        "description": "Mục tiêu của tôi là giúp bạn đạt được nguyện vọng của mình.",
         "list_clients": [
             {
                 "name": "Vietlabo",
@@ -44,20 +44,25 @@ Language: vi
                 "image": "/content/data/upload/catlong.png"
             },
             {
-                "name": "lorem",
+                "name": "Kapuco",
                 "url": "#",
                 "image": "/content/data/upload/kapuco.png"
             },
             {
-                "name": "lorem",
+                "name": "Kashion",
                 "url": "#",
                 "image": "/content/data/upload/kashion.jpg"
+            },
+            {
+                "name": "VNG",
+                "url": "#",
+                "image": "/content/data/upload/vng.png"
             }
         ]
     },
     "team":{
-        "title": "Meet my professional Team",
-        "description": "We are Best Team in the World that bring your Ideas to life.",
+        "title": "Tôi có một nhóm chuyên nghiệp",
+        "description": "Chúng tôi là nhóm tốt nhất có thể mang ý tưởng của bạn đến với thế giới",
         "list_team":[
             {
                 "image": "/content/data/upload/toan.jpg",
@@ -75,7 +80,7 @@ Language: vi
                         "link": ""
                     }
                 ],
-                "name": "Tran Ba Toan (Me)",
+                "name": "Trần Bá Toàn(Tôi)",
                 "position": "Back-end developer"
             },
             {
@@ -90,7 +95,7 @@ Language: vi
                         "link": ""
                     }
                 ],
-                "name": "Luong Minh Tri",
+                "name": "Lương Minh Trí",
                 "position": "Full Stack Developer"
             },
             {
@@ -105,7 +110,7 @@ Language: vi
                         "link": ""
                     }
                 ],
-                "name": "Tran Van Quang",
+                "name": "Trần Văn Quang",
                 "position": "Web designer"
             },
             {
@@ -120,7 +125,7 @@ Language: vi
                         "link": ""
                     }
                 ],
-                "name": "Nguyen Binh Vi",
+                "name": "Nguyễn Bình Vĩ",
                 "position": "Front-end developer"
             },
             {
@@ -135,16 +140,16 @@ Language: vi
                         "link": ""
                     }
                 ],
-                "name": "Vo Duc Lam",
+                "name": "Võ Đức Lâm",
                 "position": "SEO - PPC"
             }
         ]
     },
     "contact":{
-        "title": "My Contact Info",
-        "description": "HAVE QUESTIONS? NEED HELP? GIVE ME A BUZZ",
-        "contact_info": "If you need to get in contact with me the form below is a good place to start. Simply fill out the field with your message and I’ll get a nifty email sent over in no time. I typically respond within 24-hours and look forward to hearing from you! Thanks for checking out my website. ",
-        "address": "67 Le Quang Dinh, Ward 14, Binh Thanh District, Ho Chi Minh City. Vietnam",
+        "title": "Thông tin liên lạc",
+        "description": "Có thắc mắc hoặc cần giúp đỡ? Hãy liên lạc ngay với tôi.",
+        "contact_info": "Nếu Quý khách có nhu cầu liên hệ, vui lòng xem những thông tin bên dưới, nhập nội dung liên hệ vào form bên cạnh để gửi thư điện tử cho tôi. Tôi sẽ nhận được thư của Quý khách ngay lập tức và sẽ phản hồi trong vòng 24h. Luôn mong đợi sự liên hệ của Quý khách. Chân thành cảm ơn đã đến với website của tôi.",
+        "address": "67 Lê Quang Định, Phường 14, Quận Bình Thạnh, Thành Phố Hồ Chí Minh, Việt Nam",
         "phone": "+84932041146",
         "email": "whitesand310@gmail.com"
     }
