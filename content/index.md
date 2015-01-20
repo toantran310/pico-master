@@ -43,12 +43,12 @@ Description: This description will go in the meta description tag
                 "image": "/content/data/upload/catlong.png"
             },
             {
-                "name": "lorem",
+                "name": "Kapuco",
                 "url": "#",
                 "image": "/content/data/upload/kapuco.png"
             },
             {
-                "name": "lorem",
+                "name": "Kashion",
                 "url": "#",
                 "image": "/content/data/upload/kashion.jpg"
             },
