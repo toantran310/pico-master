@@ -6,7 +6,7 @@ Language: vi
 {
     "abouts": {
         "title":"Chào Mừng Đến Với Hồ Sơ Năng Lực Của Tôi",
-        "description": "Tôi tên là Trần Bá Toàn và là một nhà phát triển web ở thành phố Hồ Chí Minh, Việt Nam. Tôi hiện đang làm việc tại công ty Innity VietNam và đồng thời là thành viên của nhóm GAPT, tôi cũng làm việc với tư cách lập trình viên tự do khi có thời gian rảnh. Tôi yêu thích lập trình và phát triển các giải pháp sáng tạo nhằm hỗ trợ cho các cá nhân và doanh nghiệp thực hiện hình thức kinh doanh trực tuyến. Rất hân hạnh và sẵn sàng mang đến cho Quý khách những trang web sáng tạo, ấn tượng và độc đáo nhất.",
+        "description": "Tôi tên là Trần Bá Toàn và là một nhà phát triển web ở thành phố Hồ Chí Minh, Việt Nam. Tôi hiện đang làm việc tại công ty Innity VietNam và đồng thời là thành viên của nhóm JetDev, tôi cũng làm việc với tư cách lập trình viên tự do khi có thời gian rảnh. Tôi yêu thích lập trình và phát triển các giải pháp sáng tạo nhằm hỗ trợ cho các cá nhân và doanh nghiệp thực hiện hình thức kinh doanh trực tuyến. Rất hân hạnh và sẵn sàng mang đến cho Quý khách những trang web sáng tạo, ấn tượng và độc đáo nhất.",
         "list_about": [
             {
                 "title":"CMS / BLOGS / E-COMMERCE",
@@ -49,14 +49,19 @@ Language: vi
                 "image": "/content/data/upload/kapuco.png"
             },
             {
-                "name": "Kashion",
-                "url": "#",
-                "image": "/content/data/upload/kashion.jpg"
-            },
-            {
                 "name": "VNG",
                 "url": "#",
                 "image": "/content/data/upload/vng.png"
+            },
+            {
+                "name": "Coreka",
+                "url": "#",
+                "image": "/content/data/upload/logo-coreka.png"
+            },
+            {
+            "name": "MySoftSource",
+            "url": "#",
+            "image": "/content/data/upload/mss-logo.png"
             }
         ]
     },

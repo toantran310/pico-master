@@ -7,7 +7,7 @@
  * @link http://picocms.org
  * @license http://opensource.org/licenses/MIT
  */
-include("mail/class.phpmailer.php");
+//include("mail/class.phpmailer.php");
 class Pico_Contact {
     private  $run_this_plugin = false;
 
@@ -96,7 +96,7 @@ class Pico_Contact {
 
             $mail -> Username = "whitesand310@gmail.com";
 
-            $mail -> Password = "librA0310";
+            $mail -> Password = "toAn1989";
 
             $mail -> CharSet = "UTF-8";
 

@@ -5,7 +5,7 @@ Description: This description will go in the meta description tag
 {
     "abouts": {
         "title":"HELLO AND WELCOME TO MY PERSONAL PORTFOLIO",
-        "description": "My name's Toan and I'm a freelancer back-end developer in Ho Chi Minh City, VietNam. I am currently working full-time for Innity VietNam and a member of GAPT team. I love programing & developing creative solutions that enable companies and individuals to do business online. I would be glad to make creative website for you.",
+        "description": "My name's Toan and I'm a freelancer back-end developer in Ho Chi Minh City, VietNam. I am currently working full-time for Innity VietNam and a member of JetDev. I love programing & developing creative solutions that enable companies and individuals to do business online. I would be glad to make creative website for you.",
         "list_about": [
             {
                 "title":"CMS / BLOGS / E-COMMERCE",
@@ -48,14 +48,19 @@ Description: This description will go in the meta description tag
                 "image": "/content/data/upload/kapuco.png"
             },
             {
-                "name": "Kashion",
-                "url": "#",
-                "image": "/content/data/upload/kashion.jpg"
-            },
-            {
              "name": "VNG",
              "url": "#",
              "image": "/content/data/upload/vng.png"
+            },
+            {
+            "name": "Coreka",
+            "url": "#",
+            "image": "/content/data/upload/logo-coreka.png"
+            },
+            {
+            "name": "MySoftSource",
+            "url": "#",
+            "image": "/content/data/upload/mss-logo.png"
             }
         ]
     },
