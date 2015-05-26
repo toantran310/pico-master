@@ -88,15 +88,15 @@ class Pico_Contact {
 
             $mail -> IsHTML(true);
 
-            $mail -> Host     = "ssl://smtp.gmail.com";
+            $mail -> Host     = "smtp.gmail.com";
 
             $mail -> Port     = 465;
 
             $mail -> SMTPAuth = true;
 
-            $mail -> Username = "whitesand310@gmail.com";
+            $mail -> Username = "whitesand.3101@gmail.com";
 
-            $mail -> Password = "toAn1989";
+            $mail -> Password = "librA0310";
 
             $mail -> CharSet = "UTF-8";
 
@@ -114,7 +114,7 @@ class Pico_Contact {
 
             $mail -> AddReplyTo($_POST["mail"]);
 
-            $mail -> AddAddress("whitesand_310@yahoo.com");
+            $mail -> AddAddress("whitesand310@gmail.com");
 
             $result = array();
 
